@@ -41,8 +41,13 @@ app.get("*", (req, res) => {
   console.log("Backend server is running!");
 }); */
 
-const port = process.env.PORT || 8800;
+/* const port = process.env.PORT || 8800;
 
 app.listen(port, "0.0.0.0", function () {
   console.log("Listening on Port 8800");
+}); */
+
+const server = app.listen(process.env.PORT || 8800, () => {
+  const port = server.address().port;
+  console.log(`Express is working on port ${port}`);
 });
