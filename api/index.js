@@ -9,6 +9,8 @@ const listRoute = require("./routes/lists");
 const cors = require("cors");
 const path = require("path");
 
+dotenv.config();
+
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
