@@ -3,5 +3,5 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://gasfedev-netflix.herokuapp.com/api/",
+  baseURL: "https://gfd-netflix.herokuapp.com/api/",
 });
