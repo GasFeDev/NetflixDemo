@@ -39,12 +39,12 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 
-const port = process.env.PORT || 8800;
+app.listen(process.env.PORT || 8800, () => {
+  console.log("Backend server is running!");
+});
+
+/* const port = process.env.PORT || 8800;
 
 app.listen(port, "0.0.0.0", function () {
   console.log("Listening on Port 8800");
-});
-/* app.listen(process.env.PORT || 8800, () => {
-  console.log("Backend server is running!");
-});
- */
+}); */
