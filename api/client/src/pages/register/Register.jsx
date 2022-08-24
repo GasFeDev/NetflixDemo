@@ -68,7 +68,7 @@ export default function Register() {
               ref={usernameRef}
             />
             <input type="password" placeholder="Contraseña" ref={passwordRef} />
-            <button className="registerButton" onClick={handleFinish}>
+            <button className="registerButton" onSubmit={handleFinish}>
               Start
             </button>
           </form>
