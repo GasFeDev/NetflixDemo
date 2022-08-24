@@ -35,3 +35,7 @@ app.use(express.static(path.join(__dirname, "/client/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
+
+app.listen(process.env.PORT || 8800, () => {
+  console.log("Backend server is running!");
+});
