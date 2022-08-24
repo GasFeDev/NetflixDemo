@@ -38,7 +38,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build", "index.html"));
 });
 
-var port = process.env.PORT || 8800;
+const port = process.env.PORT || 8800;
+
 app.listen(port, "0.0.0.0", function () {
   console.log("Listening on Port 8800");
 });
