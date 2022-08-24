@@ -24,7 +24,7 @@ export default function Register() {
     setUsername(usernameRef.current.value);
     try {
       await axiosInstance.post("auth/register", { email, username, password });
-      /* history.push("/login"); */
+      history.push("/login");
     } catch (err) {}
   };
   return (
