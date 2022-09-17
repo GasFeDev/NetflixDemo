@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .register {
   width: 100vw;
   height: 100vh;
@@ -19,9 +20,10 @@
 
       .logo {
         height: 75px;
+        @include mobile {
+          height: 45px;
+        }
       }
-
-      
     }
   }
 
@@ -39,14 +41,23 @@
 
     h1 {
       font-size: 50px;
+      @include mobile {
+        font-size: 25px;
+      }
     }
 
     h2 {
       margin: 20px;
+      @include mobile {
+        font-size: 12px;
+      }
     }
 
     p {
       font-size: 20px;
+      @include mobile {
+        font-size: 12px;
+      }
     }
 
     .input {
@@ -74,15 +85,28 @@
         color: white;
         font-size: 22px;
         cursor: pointer;
+        @include mobile {
+          border-radius: 15%;
+          font-size: 16px;
+        }
       }
       .loginButton {
-        flex:3.4;
+        flex: 3.4;
         height: 100%;
         background-color: red;
         border: none;
         color: white;
         font-size: 22px;
         cursor: pointer;
+        @include mobile {
+          border-radius: 15%;
+          font-size: 16px;
+        }
+      }
+      @include mobile {
+        width: 10%;
+        margin-left: -140px;
+        display: block;
       }
     }
   }

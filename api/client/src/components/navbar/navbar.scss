@@ -52,9 +52,12 @@
     .right {
       display: flex;
       align-items: center;
+      @include mobile {
+        margin: 0px -7px;
+      }
 
       .icon {
-        margin: 0px 20px;
+        margin: 0px 15px;
         cursor: pointer;
       }
 
@@ -64,10 +67,17 @@
         border-radius: 5px;
         object-fit: cover;
         cursor: pointer;
+        @include mobile {
+          display: none;
+        }
       }
 
       .profile {
         margin-left: 20px;
+        @include mobile {
+          margin: 0px 37px;
+          margin-left: -180px;
+        }
         .options {
           display: none;
           background-color: var(--main-color);
