@@ -1,19 +1,15 @@
 const express = require("express");
 const app = express();
-const dotenv = require("dotenv");
-dotenv.config();
+require("dotenv").config({ path: "./config.env" });
 const connectDB = require("./config/db");
 const path = require("path");
 const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
-const path = require("path");
-const cors = require("cors");
 
 connectDB();
 
-app.use(cors());
 app.use(express.json());
 
 app.use("/api/auth", authRoute);
